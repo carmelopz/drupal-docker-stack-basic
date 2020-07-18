@@ -79,8 +79,6 @@ RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
   && chmod +x /usr/local/bin/drush \
   && /usr/local/bin/drush --version
   
-COPY ./nginx/server.conf   /etc/nginx/nginx.conf
-COPY ./nginx/site.conf   /etc/nginx/conf.d/default.conf
 COPY ./src/   /var/www/html
 COPY ./settings/settings.local.php   /var/www/html/web/sites/default/settings.local.php
 
