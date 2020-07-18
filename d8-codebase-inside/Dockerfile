@@ -4,10 +4,10 @@ FROM php:7.4-fpm-buster
 
 # install the PHP extensions we need
 RUN set -eux; \
-	\
-	if command -v a2enmod; then \
-		a2enmod rewrite; \
-	fi; \
+	# \
+	# if command -v a2enmod; then \
+	#	a2enmod rewrite; \
+	# fi; \
 	\
 	savedAptMark="$(apt-mark showmanual)"; \
 	\
