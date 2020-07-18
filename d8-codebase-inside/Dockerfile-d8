@@ -22,5 +22,6 @@ RUN chmod -R 775 /var/www/html
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 RUN cd /var/www/html
+RUN php -dmemory_limit=-1 composer.phar update
 RUN composer update
 RUN composer install
