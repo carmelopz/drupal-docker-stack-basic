@@ -1,4 +1,6 @@
 FROM drupal:8.9.2-fpm
+
+docker-php-ext-install bcmath
 	
 # Install Composer, Drush
 RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
