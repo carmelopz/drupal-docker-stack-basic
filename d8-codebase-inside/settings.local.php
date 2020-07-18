@@ -1,3 +1,5 @@
+<?php
+
 $databases['default']['default'] = array(
   'driver' => 'mysql',
   'host' => 'database',
