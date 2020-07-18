@@ -4,6 +4,7 @@ services:
   database:
     # image: mariadb:10.5.4
     build: ./d8-database-inside
+    container_name: d8_db
     environment:
       - MYSQL_ROOT_PASSWORD=drupal8
       - MYSQL_USER=drupal8
@@ -23,9 +24,10 @@ services:
     # volumes:
       # - ../src:/var/www/html
       
-   web:
+   nginx:
     # image: nginx:1.19.1
     build: ./d8-nginx-conf-codebase-inside
+    container_name: d8_nginx
     ports:
       - "80:80"
     links:
