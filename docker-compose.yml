@@ -2,6 +2,7 @@ version: "3"
 services:
 
   database:
+    image: mariadb:latest
     build: ./d8-database-inside
     environment:
       - MYSQL_ROOT_PASSWORD=drupal8
