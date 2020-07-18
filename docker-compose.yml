@@ -10,7 +10,7 @@ services:
       - MYSQL_USER=drupal8
       - MYSQL_PASSWORD=drupal8
       - MYSQL_DATABASE=drupal8
-     ports:
+    ports:
       - "3306:3306"
     # volumes:
       # - "../db:/var/lib/mysql"
