@@ -69,6 +69,15 @@ ENV DRUPAL_MD5 f3f64fbef97831efd1c943f392975f45
 	# tar -xz --strip-components=1 -f drupal.tar.gz; \
 	# rm drupal.tar.gz; \
 	# chown -R www-data:www-data sites modules themes
+	
+# Install Composer, Drush
+RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
+  && curl -o /tmp/composer-setup.sig https://composer.github.io/installer.sig \
+  && php -r "if (hash('SHA384', file_get_contents('/tmp/composer-setup.php')) !== trim(file_get_contents('/tmp/composer-setup.sig'))) { unlink('/tmp/composer-setup.php'); echo 'Invalid installer' . PHP_EOL; exit(1); }" \
+  && php /tmp/composer-setup.php --filename composer --install-dir /usr/local/bin \
+  && curl -Lo /usr/local/bin/drush https://github.com/drush-ops/drush/releases/download/8.3.5/drush.phar \
+  && chmod +x /usr/local/bin/drush \
+  && /usr/local/bin/drush --version
   
 COPY ./nginx/server.conf   /etc/nginx/nginx.conf
 COPY ./nginx/site.conf   /etc/nginx/conf.d/default.conf
