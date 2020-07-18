@@ -79,8 +79,8 @@ RUN curl -o /tmp/composer-setup.php https://getcomposer.org/installer \
   && chmod +x /usr/local/bin/drush \
   && /usr/local/bin/drush --version
   
-COPY ./src/   /var/www/html
-COPY ./settings/settings.local.php   /var/www/html/web/sites/default/settings.local.php
+COPY ../src/   /var/www/html
+COPY ../settings/settings.local.php   /var/www/html/web/sites/default/settings.local.php
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
