@@ -24,7 +24,7 @@ services:
     # volumes:
       # - ../src:/var/www/html
       
-   nginx:
+  nginx:
     # image: nginx:1.19.1
     build: ./d8-nginx-conf-codebase-inside
     container_name: d8_nginx
