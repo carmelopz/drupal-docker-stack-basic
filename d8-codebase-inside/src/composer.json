@@ -36,7 +36,6 @@
         "doctrine/common": "~2.7.3",
         "doctrine/instantiator": "~1.0.5",
         "doersguild/jquery.print": "master",
-        "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/admin_toolbar": "^2.0",
         "drupal/advancedqueue": "^1.0@beta",
         "drupal/asset_injector": "^2.2",
