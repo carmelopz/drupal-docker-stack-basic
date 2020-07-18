@@ -17,6 +17,7 @@ services:
       
   php:
     # image: php:7.4.8-fpm-buster
+    context: ../
     build: ./d8-codebase-inside
     container_name: d8_php
     ports:
@@ -26,6 +27,7 @@ services:
       
   nginx:
     # image: nginx:1.19.1
+    context: ../
     build: ./d8-nginx-conf-codebase-inside
     container_name: d8_nginx
     ports:
