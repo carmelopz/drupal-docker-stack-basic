@@ -1,4 +1,4 @@
-FROM drupal:8.9.2-fpm
+FROM drupal:8.8-fpm
 
 RUN docker-php-ext-install bcmath
 	
