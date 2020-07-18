@@ -29,7 +29,7 @@ services:
     build: ./d8-nginx-conf-codebase-inside
     container_name: d8_nginx
     ports:
-      - "80:80"
+      - "8080:80"
     links:
      - php
      - database
