@@ -2,7 +2,7 @@ version: "3"
 services:
 
   database:
-    image: mariadb:latest
+    image: mariadb:10.5.4
     build: ./d8-database-inside
     environment:
       - MYSQL_ROOT_PASSWORD=drupal8
@@ -15,6 +15,7 @@ services:
       # - "../db:/var/lib/mysql"
       
   php:
+    image: php:7.4.8-fpm-buster
     build: ./d8-codebase-inside
     container_name: d8_php
     ports:
@@ -23,6 +24,7 @@ services:
       # - ../src:/var/www/html
       
    web:
+    image: nginx:1.19.1
     build: ./d8-nginx-conf-codebase-inside
     ports:
       - "80:80"
