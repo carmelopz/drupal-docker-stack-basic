@@ -22,5 +22,5 @@ RUN chmod -R 775 /var/www/html
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 RUN cd /var/www/html
-RUN composer config repositories.drupal composer https://packages.drupal.org/8
+RUN composer update
 RUN composer install
