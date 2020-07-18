@@ -21,7 +21,7 @@ COPY ./files   /var/www/html/web/sites/default/files
 RUN chmod -R 775 /var/www/html
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
+ENV COMPOSER_MEMORY_LIMIT -1
 RUN cd /var/www/html
-RUN php -dmemory_limit=-1 /usr/local/bin/composer
 RUN composer update
 RUN composer install
