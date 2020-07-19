@@ -1,1 +1,1 @@
-# drupal-docker-stack
+# drupal-docker-stack-basic
