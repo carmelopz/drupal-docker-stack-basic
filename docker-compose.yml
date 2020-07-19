@@ -36,6 +36,6 @@ services:
     links:
      - php
      - database
-     volumes:
+    volumes:
        - ./src:/var/www/html
    
